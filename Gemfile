@@ -41,4 +41,8 @@ group :development do
   gem 'web-console', '4.0.4'
 end
 
+group :test do
+  gem 'simplecov', '0.19.0', require: false
+end
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
