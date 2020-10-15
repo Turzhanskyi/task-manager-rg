@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
+gem 'anycable-rails', '1.0.4'
 gem 'bootsnap', '1.4.8', require: false
 gem 'jbuilder', '2.10.1'
 gem 'pg', '1.2.3'
@@ -14,6 +17,9 @@ gem 'webpacker', '5.1.1'
 
 group :development, :test do
   gem 'byebug', '11.1.3', platforms: %i[mri mingw x64_mingw]
+  gem 'rubocop-performance', '1.8.1', require: false
+  gem 'rubocop-rails', '2.8.1', require: false
+  gem 'rubocop-rspec', '1.43.2', require: false
 end
 
 group :development do
