@@ -17,6 +17,8 @@ gem 'webpacker', '5.1.1'
 
 group :development, :test do
   gem 'byebug', '11.1.3', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '6.1.0'
+  gem 'ffaker', '2.17.0'
   gem 'overcommit', '0.57.0'
   gem 'pronto', '0.10.0', require: false
   gem 'pronto-brakeman', '0.10.0', require: false
@@ -24,9 +26,12 @@ group :development, :test do
   gem 'pronto-rails_best_practices', '0.10.0', require: false
   gem 'pronto-reek', '0.10.0', require: false
   gem 'pronto-rubocop', '0.10.0', require: false
+  gem 'rails-controller-testing', '1.0.5'
+  gem 'rspec-rails', '4.0.1'
   gem 'rubocop-performance', '1.8.1', require: false
   gem 'rubocop-rails', '2.8.1', require: false
   gem 'rubocop-rspec', '1.43.2', require: false
+  gem 'shoulda-matchers', '4.4.1'
 end
 
 group :development do
