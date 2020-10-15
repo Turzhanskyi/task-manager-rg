@@ -17,6 +17,7 @@ gem 'webpacker', '5.1.1'
 
 group :development, :test do
   gem 'byebug', '11.1.3', platforms: %i[mri mingw x64_mingw]
+  gem 'overcommit', '0.57.0'
   gem 'rubocop-performance', '1.8.1', require: false
   gem 'rubocop-rails', '2.8.1', require: false
   gem 'rubocop-rspec', '1.43.2', require: false
