@@ -1,33 +1,52 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  devise:
+    registrations:
+      auth: "Click the icon to exit the application or change the user"
+      new:
+        sign_up: "Sign up"
+      edit:
+        currently_waiting_confirmation_for_email: "Currently waiting confirmation for email"
+        leave_blank_if_you_don_t_want_to_change_it: "Leave blank if you dont want to change it"
+        we_need_your_current_password_to_confirm_your_changes: "We need your current password to confirm your changes"
+        update: "Update"
+        cancel_my_account: "Cancel my account"
+        unhappy: "Unhappy"
+    shared:
+      minimum_password_length: "Minimum password length"
+      links:
+        back: "Back"
+        sign_in: "Sign in"
+        sign_up: "Sign up"
+        forgot_your_password: "Forgot your password"
+        didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions"
+        didn_t_receive_unlock_instructions: "Didn't receive unlock instructions"
+        sign_in_with_provider: "Sign in with provider"
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Resend confirmation instructions"
+    passwords:
+      edit:
+        new_password: "New password"
+        change_your_password: "Change your password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+      new:
+        forgot_your_password: "Forgot your password"
+        send_me_reset_password_instructions: "Send me reset password instructions"
+    sessions:
+      new:
+        sign_in: "Sign in"
+      destroy:
+        log_out: "Log out"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Resend unlock instructions"
+
+  cancel: 'Cancel'
+  create: 'Create'
+  save: 'Save'
+  edit: 'Edit'
+  delete: 'Delete'
+  search: 'Search'
+  clear: 'Clear'
+  confirm: 'Are you sure to remove?'

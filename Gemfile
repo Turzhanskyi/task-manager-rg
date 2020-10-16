@@ -13,6 +13,8 @@ gem 'pg', '1.2.3'
 gem 'puma', '4.3.6'
 gem 'rails', '6.0.3.4'
 gem 'sass-rails', '6.0'
+gem 'simple_form', '5.0.3'
+gem 'slim', '4.1.0'
 gem 'turbolinks', '5.2.1'
 gem 'webpacker', '5.1.1'
 
