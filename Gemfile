@@ -35,6 +35,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate', '3.1.1'
   gem 'listen', '3.2.1'
   gem 'spring', '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
