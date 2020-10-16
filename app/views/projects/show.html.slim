@@ -1,0 +1,15 @@
+p
+  strong
+    = t('activerecord.models.project.name')
+  = @project.name
+p
+  strong
+    = t('activerecord.models.project.description')
+  = @project.description
+p
+  strong
+    = t('activerecord.models.project.user')
+  = @project.user_id
+= link_to t('edit'), edit_project_path(@project)
+|  |
+= link_to t('back'), projects_path

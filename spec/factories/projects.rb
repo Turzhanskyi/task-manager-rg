@@ -22,7 +22,7 @@
 FactoryBot.define do
   factory :project do
     name { FFaker::Name.unique.name }
-    description { FFaker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 4) }
+    description { FFaker::Name.unique.name }
     user
   end
 end

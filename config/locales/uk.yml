@@ -1,4 +1,10 @@
 uk:
+  controller:
+    projects_controller:
+      create_notice: 'Проєкт успішно створено.'
+      update_notice: 'Проєкт успішно оновлено.'
+      destroy_notice: 'Проєкт успішно видалено.'
+
   devise:
     registrations:
       auth: "Для виходу з програми або зміни користувача натисніть піктограму"
