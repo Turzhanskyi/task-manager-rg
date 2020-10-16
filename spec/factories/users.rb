@@ -29,6 +29,7 @@ FactoryBot.define do
   factory :user do
     login { FFaker::Name.unique.name }
     email { FFaker::Internet.unique.email }
+    password { SecureRandom.uuid }
     encrypted_password { SecureRandom.uuid }
   end
 end

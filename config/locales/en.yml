@@ -1,4 +1,27 @@
 en:
+  controller:
+    projects_controller:
+      create_notice: 'Project was successfully created.'
+      update_notice: 'Project was successfully updated.'
+      destroy_notice: 'Project was successfully destroyed.'
+
+  activerecord:
+    models:
+      project:
+        one: 'Project'
+        other: 'Projects'
+        create_new: 'New Project'
+        edit: 'Editing Project'
+        name: 'Name'
+        description: 'Description'
+        user: 'User'
+        error: 'prohibited this project from being saved:'
+        attributes:
+          name:
+            placeholder: 'Enter project name'
+          description:
+            placeholder: 'Enter project description'
+
   devise:
     registrations:
       auth: "Click the icon to exit the application or change the user"
@@ -50,3 +73,5 @@ en:
   search: 'Search'
   clear: 'Clear'
   confirm: 'Are you sure to remove?'
+  show: 'Show'
+  back: 'Back'

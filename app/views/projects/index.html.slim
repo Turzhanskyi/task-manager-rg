@@ -1,0 +1,28 @@
+h1= t('activerecord.models.project.other')
+table
+  thead
+    tr
+      th
+        = t('activerecord.models.project.name')
+      th
+        = t('activerecord.models.project.description')
+      th
+        = t('activerecord.models.project.user')
+      th[colspan="3"]
+  tbody
+    - @projects.each do |project|
+      tr
+        td
+          = project.name
+        td
+          = project.description
+        td
+          = project.user_id
+        td
+          = link_to t('show'), project
+        td
+          = link_to t('edit'), edit_project_path(project)
+        td
+          = link_to t('delete'), project, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Project', new_project_path
