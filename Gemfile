@@ -7,6 +7,7 @@ ruby '2.7.2'
 
 gem 'anycable-rails', '1.0.4'
 gem 'bootsnap', '1.4.8', require: false
+gem 'devise', '4.7.3'
 gem 'jbuilder', '2.10.1'
 gem 'pg', '1.2.3'
 gem 'puma', '4.3.6'
