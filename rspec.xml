@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="0" skipped="0" failures="0" errors="0" time="0.000536" timestamp="2020-10-16T19:30:59+03:00" hostname="T450s">
+<testsuite name="rspec" tests="0" skipped="0" failures="0" errors="0" time="0.000752" timestamp="2020-10-16T20:24:07+03:00" hostname="T450s">
 <properties>
-<property name="seed" value="43135"/>
+<property name="seed" value="35174"/>
 </properties>
 </testsuite>

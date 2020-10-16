@@ -1,0 +1,99 @@
+uk:
+  devise:
+    registrations:
+      auth: "Для виходу з програми або зміни користувача натисніть піктограму"
+      new:
+        sign_up: "Реєстрація"
+      edit:
+        currently_waiting_confirmation_for_email: "Зараз чекає підтвердження на електронну пошту"
+        leave_blank_if_you_don_t_want_to_change_it: "Залиште порожнє, якщо ви не хочете його змінювати"
+        we_need_your_current_password_to_confirm_your_changes: "Для підтвердження змін нам потрібен ваш поточний пароль"
+        update: "Оновити"
+        cancel_my_account: "Скасувати мій обліковий запис"
+        unhappy: "Невдала спроба"
+    shared:
+      minimum_password_length: "Мінімальна довжина пароля"
+      links:
+        back: "Назад"
+        sign_in: "Увійти"
+        sign_up: "Реєстрація"
+        forgot_your_password: "Забули свій пароль"
+        didn_t_receive_confirmation_instructions: "Не отримано інструкцій підтвердження"
+        didn_t_receive_unlock_instructions: "Не отримали інструкцій щодо розблокування"
+        sign_in_with_provider: "Увійти через провайдера"
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Повторно подати підтвердження"
+    passwords:
+      edit:
+        new_password: "Новий пароль"
+        change_your_password: "Змінити пароль"
+        confirm_new_password: "Підтвердити новий пароль"
+        change_my_password: "Змінити пароль"
+      new:
+        forgot_your_password: "Забули свій пароль"
+        send_me_reset_password_instructions: "Надішліть мені інструкції щодо скидання пароля"
+    sessions:
+      new:
+        sign_in: "Увійти"
+      destroy:
+        log_out: "Вийти"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Повторіть інструкції щодо розблокування"
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: має бути прийнятий
+      blank: не може бути пустим
+      confirmation: не збігається з підтвердженням
+      empty: не може бути порожнім
+      equal_to: має дорівнювати %{count}
+      even: має бути парним
+      exclusion: зарезервовано
+      greater_than: має бути більше ніж %{count}
+      greater_than_or_equal_to: має бути більше ніж або дорівнювати %{count}
+      inclusion: не включено до переліку
+      invalid: недійсний
+      less_than: має бути менше ніж %{count}
+      less_than_or_equal_to: має бути менше ніж або дорівнювати %{count}
+      model_invalid: "Виникли помилки: %{errors}"
+      not_a_number: не число
+      not_an_integer: не є цілим числом
+      odd: має бути непарним
+      other_than: має відрізнятись від %{count}
+      present: має бути пустим
+      required: не може бути порожнім
+      taken: вже зайнятий
+      too_long:
+        one: занадто довгий (максимум %{count} знак)
+        few: занадто довгий (максимум %{count} знаки)
+        many: занадто довгий (максимум %{count} знаків)
+        other: занадто довгий (максимум %{count} знаку)
+      too_short:
+        one: занадто короткий (мінімум %{count} знак)
+        few: занадто короткий (мінімум %{count} знаки)
+        many: занадто короткий (мінімум %{count} знаків)
+        other: занадто короткий (мінімум %{count} знаку)
+      wrong_length:
+        one: неправильна довжина (має бути %{count} знак)
+        few: неправильна довжина (має бути %{count} знаки)
+        many: неправильна довжина (має бути %{count} знаків)
+        other: неправильна довжина (має бути %{count} знаку)
+    template:
+      body: 'Помилки виявлено в таких полях:'
+      header:
+        one: "%{model} не збережено через %{count} помилку"
+        few: "%{model} не збережено через %{count} помилки"
+        many: "%{model} не збережено через %{count} помилок"
+        other: "%{model} не збережено через %{count} помилки"
+
+  cancel: 'Відміна'
+  create: 'Створити'
+  save: 'Зберегти'
+  edit: 'Редагувати'
+  delete: 'Видалити'
+  search: 'Пошук'
+  clear: 'Очистити'
+  confirm: 'Ви бажаєте видалити?'
