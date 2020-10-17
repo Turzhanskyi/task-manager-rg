@@ -22,6 +22,25 @@ en:
           description:
             placeholder: 'Enter project description'
 
+      task:
+        one: 'Task'
+        other: 'Tasks'
+        listing: 'Listing tasks'
+        create_new: 'New Task'
+        edit: 'Editing Task'
+        name: 'Name'
+        description: 'Description'
+        status: 'Status'
+        project: 'Project'
+        error: 'prohibited this task from being saved:'
+        attributes:
+          name:
+            placeholder: 'Enter task name'
+          description:
+            placeholder: 'Enter task description'
+          status:
+            placeholder: 'Select status'
+
   devise:
     registrations:
       auth: "Click the icon to exit the application or change the user"
@@ -72,6 +91,6 @@ en:
   delete: 'Delete'
   search: 'Search'
   clear: 'Clear'
-  confirm: 'Are you sure to remove?'
+  confirm: 'Are you sure?'
   show: 'Show'
   back: 'Back'

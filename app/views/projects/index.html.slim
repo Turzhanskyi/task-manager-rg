@@ -23,6 +23,6 @@ table
         td
           = link_to t('edit'), edit_project_path(project)
         td
-          = link_to t('delete'), project, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to t('delete'), project, method: :delete, data: { confirm: t('confirm') }
 br
-= link_to 'New Project', new_project_path
+= link_to t('activerecord.models.project.create_new'), new_project_path

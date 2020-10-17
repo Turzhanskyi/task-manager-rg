@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   root to: 'projects#index'
 
-  resources :projects
+  resources :projects do
+    resources :tasks
+  end
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener'
 end
