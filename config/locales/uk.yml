@@ -16,6 +16,7 @@ uk:
         description: 'Опис'
         user: 'Користувач'
         error: 'заборонив збереження цього проєкту:'
+        add_task: 'Додати завдання'
         attributes:
           name:
             placeholder: 'Введіть назву проєкту'
