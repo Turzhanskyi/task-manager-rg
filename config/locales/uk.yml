@@ -5,6 +5,42 @@ uk:
       update_notice: 'Проєкт успішно оновлено.'
       destroy_notice: 'Проєкт успішно видалено.'
 
+  activerecord:
+    models:
+      project:
+        one: 'Проєкт'
+        other: 'Проєкти'
+        create_new: 'Новий проєкт'
+        edit: 'Редагування проєкту'
+        name: 'Назва'
+        description: 'Опис'
+        user: 'Користувач'
+        error: 'заборонив збереження цього проєкту:'
+        attributes:
+          name:
+            placeholder: 'Введіть назву проєкту'
+          description:
+            placeholder: 'Введіть опис проєкту'
+
+      task:
+        one: 'Завдання'
+        other: 'Завдання'
+        listing: 'Перелік завдань'
+        create_new: 'Нове завдання'
+        edit: 'Редагування завдання'
+        name: 'Зміст'
+        description: 'Опис'
+        status: 'Статус'
+        project: 'Проєкт'
+        error: 'заборонив збереження цього завдання:'
+        attributes:
+          name:
+            placeholder: 'Введіть зміст завдання'
+          description:
+            placeholder: 'Введіть опис завдання'
+          status:
+            placeholder: 'Виберіть статус'
+
   devise:
     registrations:
       auth: "Для виходу з програми або зміни користувача натисніть піктограму"
@@ -102,4 +138,6 @@ uk:
   delete: 'Видалити'
   search: 'Пошук'
   clear: 'Очистити'
-  confirm: 'Ви бажаєте видалити?'
+  confirm: 'Ви впевнені?'
+  show: 'Показати'
+  back: 'Назад'

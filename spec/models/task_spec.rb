@@ -25,6 +25,11 @@ require 'rails_helper'
 RSpec.describe Task, type: :model do
   context 'validations' do
     it { is_expected.to validate_presence_of(:name) }
+
+    it do
+      should validate_inclusion_of(:status)
+        .in_array(%w[not-started in-progress complete])
+    end
   end
 
   context 'associations' do

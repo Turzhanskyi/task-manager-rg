@@ -1,0 +1,24 @@
+= form_for([@task.project, @task]) do |f|
+  - if @task.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@task.errors.count, "error")
+          = t('activerecord.models.task.error')
+      ul
+        - @task.errors.full_messages.each do |msg|
+          li
+            = msg
+  .field
+    = f.label :name
+    br
+    = f.text_field :name
+  .field
+    = f.label :description
+    br
+    = f.text_area :description
+  .field
+    = f.label :status
+    br
+    = f.select :status, Task::STATUS_OPTIONS
+  .actions
+    = f.submit

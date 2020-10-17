@@ -24,4 +24,12 @@ class Task < ApplicationRecord
   validates :name, presence: true
 
   belongs_to :project
+
+  validates :status, inclusion: { in: %w[not-started in-progress complete] }
+
+  STATUS_OPTIONS = [
+    ['Not started', 'not-started'],
+    ['In progress', 'in-progress'],
+    %w[Complete complete]
+  ].freeze
 end
