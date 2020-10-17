@@ -24,7 +24,7 @@
         .card.mb-3
           .card-body
             .d-flex.justify-content-between
-              span.badge.badge-primary.mb-3
+              span.mb-3 class=("badge badge-#{task.badge_color}")
                 = task.status
               div
                 = link_to t('edit'), edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm'
