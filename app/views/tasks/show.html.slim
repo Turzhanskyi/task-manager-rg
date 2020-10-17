@@ -1,11 +1,14 @@
 p
-  b= t('activerecord.models.task.name')
+  b
+    = t('activerecord.models.task.name')
   = @task.name
 p
-  b= t('activerecord.models.task.description')
+  b
+    = t('activerecord.models.task.description')
   = @task.description
 p
-  b= t('activerecord.models.task.status')
+  b
+    = t('activerecord.models.task.status')
   = @task.status
 
 = link_to t('edit'), edit_project_task_path(@task.project, @task)
