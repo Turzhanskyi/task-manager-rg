@@ -12,6 +12,6 @@ import "../stylesheets/application"
 document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
-    var el = document.getElementById('task-list');
+    var el = document.getElementById('tasks-list');
     var sortable = Sortable.create(el);
 })
