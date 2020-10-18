@@ -1,18 +1,10 @@
 = form_with(model: project, local: true) do |form|
-  - if project.errors.any?
-    #error_explanation
-      h2
-        = pluralize(project.errors.count, "error")
-          = t('activerecord.models.project.error')
-      ul
-        - project.errors.full_messages.each do |message|
-          li
-            = message
-  .field
+  = render 'errors', errors: project.errors
+  .form-group
     = form.label :name
-    = form.text_field :name
-  .field
+    = form.text_field :name, class: 'form-control'
+  .form-group
     = form.label :description
-    = form.text_area :description
+    = form.text_area :description, class: 'form-control'
   .actions
     = form.submit

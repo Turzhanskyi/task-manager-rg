@@ -15,7 +15,7 @@ en:
         name: 'Name'
         description: 'Description'
         user: 'User'
-        error: 'prohibited this project from being saved:'
+        add_task: 'Add Task'
         attributes:
           name:
             placeholder: 'Enter project name'
@@ -32,7 +32,8 @@ en:
         description: 'Description'
         status: 'Status'
         project: 'Project'
-        error: 'prohibited this task from being saved:'
+        tasks: ' tasks)'
+        complete: '% complete'
         attributes:
           name:
             placeholder: 'Enter task name'

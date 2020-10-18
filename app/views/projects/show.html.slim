@@ -1,44 +1,36 @@
-p
-  strong
-    = t('activerecord.models.project.name')
-  = @project.name
-p
-  strong
-    = t('activerecord.models.project.description')
-  = @project.description
-p
-  strong
-    = t('activerecord.models.project.user')
-  = @project.user_id
-= link_to t('edit'), edit_project_path(@project)
-|  |
-= link_to t('back'), projects_path
-
-hr
-h1= t('activerecord.models.task.create_new')
-= render 'tasks/form'
-hr
-h1= t('activerecord.models.task.listing')
-table
-  tr
-    th= t('activerecord.models.task.name')
-    th= t('activerecord.models.task.description')
-    th= t('activerecord.models.task.status')
-    th[colspan="3"]
-  - @project.tasks.each do |task|
-    - if task.persisted?
-      tr
-        td
-          = task.name
-        td
-          = task.description
-        td
-          = task.status
-        td
-          = link_to t('show'), [task.project, task]
-        td
-          = link_to t('edit'), edit_project_task_path(task.project, task)
-        td
-          = link_to t('delete'), [task.project, task], method: :delete, data: { confirm: t('confirm') }
-br
-= link_to t('activerecord.models.task.create_new'), new_project_task_path(@project.id)
+= link_to t('back'), projects_path, class: 'btn btn-secondary mb-3'
+.card
+  .card-body
+    h2.card-title.d-flex.justify-content-between.mb-4
+      span
+        = @project.name
+    div
+      = link_to t('edit'), edit_project_path(@project), class: 'btn btn-light'
+      = link_to t('delete'), @project, method: :delete, class: 'btn btn-dark', data: { confirm: 'Are you sure?' }
+    .mb-4
+      h6
+        = t('activerecord.models.project.add_task')
+      = form_for([@task.project, @task]) do |f|
+        = render 'errors', errors: @task.errors
+        = f.hidden_field :status, value: 'not-started'
+        .input-group
+          = f.text_field :name, class: 'form-control', placeholder: t('activerecord.models.task.attributes.name.placeholder')
+          .input-group-append
+            = f.submit class: 'btn btn-primary'
+    h4
+      = t('activerecord.models.task.other')
+    - @project.tasks.each do |task|
+      - if task.persisted?
+        .card.mb-3
+          .card-body
+            .d-flex.justify-content-between
+              span.mb-3 class=("badge badge-#{task.badge_color}")
+                = task.status
+              div
+                = link_to t('edit'), edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm'
+                = link_to t('delete'), [task.project, task], method: :delete, class: 'btn btn-dark btn-sm', data: { confirm: t('confirm') }
+            h5.card-title.mb-2
+              span
+                = task.name
+            p
+              = task.description

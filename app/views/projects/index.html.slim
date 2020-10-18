@@ -1,28 +1,25 @@
-h1= t('activerecord.models.project.other')
-table
-  thead
-    tr
-      th
-        = t('activerecord.models.project.name')
-      th
-        = t('activerecord.models.project.description')
-      th
-        = t('activerecord.models.project.user')
-      th[colspan="3"]
-  tbody
+.card
+  .card-body
+    h2.card-title.d-flex.justify-content-between.mb-4
+      span
+        = t('activerecord.models.project.other')
+      = link_to t('activerecord.models.project.create_new'), new_project_path, class: 'btn btn-primary'
     - @projects.each do |project|
-      tr
-        td
-          = project.name
-        td
-          = project.description
-        td
-          = project.user_id
-        td
-          = link_to t('show'), project
-        td
-          = link_to t('edit'), edit_project_path(project)
-        td
-          = link_to t('delete'), project, method: :delete, data: { confirm: t('confirm') }
-br
-= link_to t('activerecord.models.project.create_new'), new_project_path
+      = link_to project, class: 'text-decoration-none' do
+        .card.project-card.mb-3
+          .card-body
+            .mb-3
+              span class=("badge badge-#{project.badge_color}")
+                = project.status
+              br
+              span.text-secondary
+                small
+                  = project.percent_complete
+                  = t('activerecord.models.task.complete')
+                  |  (#{project.total_complete}/#{project.total_tasks}
+                  = t('activerecord.models.task.tasks')
+            h5.card-title.text-dark
+              b
+                = project.name
+            p.text-secondary
+              = project.description

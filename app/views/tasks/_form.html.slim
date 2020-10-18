@@ -1,24 +1,16 @@
 = form_for([@task.project, @task]) do |f|
-  - if @task.errors.any?
-    #error_explanation
-      h2
-        = pluralize(@task.errors.count, "error")
-          = t('activerecord.models.task.error')
-      ul
-        - @task.errors.full_messages.each do |msg|
-          li
-            = msg
-  .field
+  = render 'projects/errors', errors: @task.errors
+  .form-group
     = f.label :name
     br
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :description
     br
-    = f.text_area :description
-  .field
+    = f.text_area :description, class: 'form-control'
+  .form-group
     = f.label :status
     br
-    = f.select :status, Task::STATUS_OPTIONS
+    = f.select :status, Task::STATUS_OPTIONS, {}, class: 'form-control'
   .actions
-    = f.submit
+    = f.submit class: 'btn btn-primary'

@@ -1,3 +1,7 @@
-h1= t('activerecord.models.project.create_new')
-= render 'form', project: @project
-= link_to t('back'), projects_path
+= link_to t('back'), projects_path, class: 'btn btn-secondary mb-3'
+.card
+  .card-body
+    h2.card-title.mb-4
+      span
+        = t('activerecord.models.project.create_new')
+    = render 'form', project: @project

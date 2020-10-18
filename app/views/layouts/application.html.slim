@@ -1,0 +1,18 @@
+html
+  head
+    title
+      | TaskManagerRg
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body.bg-light
+    .container.pt-5
+      p.notice
+        = notice
+      p.alert
+        = alert
+      .card
+        .card-body
+          = yield
