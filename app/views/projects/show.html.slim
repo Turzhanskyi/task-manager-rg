@@ -2,21 +2,24 @@
 .card
   .card-body
     h2.card-title.d-flex.justify-content-between.mb-4
-      span
+      i.fas.fa-calendar-alt.grip.text-secondary
+      span.text-primary
         = @project.name
-    div
-      = link_to t('edit'), edit_project_path(@project), class: 'btn btn-light'
-      = link_to t('delete'), @project, method: :delete, class: 'btn btn-dark', data: { confirm: 'Are you sure?' }
+      span
+        = link_to edit_project_path(@project), class: 'btn btn-lg' do
+          i.fas.fa-pencil-alt
+        | |
+        = link_to @project, method: :delete, class: 'btn btn-lg', data: { confirm: 'Are you sure?' } do
+          i.fas.fa-trash-alt
     .mb-4
-      h6
-        = t('activerecord.models.project.add_task')
       = form_for([@task.project, @task]) do |f|
         = render 'errors', errors: @task.errors
         = f.hidden_field :status, value: 'not-started'
         .input-group
+          i.fas.fa-plus.fa-2x.btn-info
           = f.text_field :name, class: 'form-control', placeholder: t('activerecord.models.task.attributes.name.placeholder')
           .input-group-append
-            = f.submit class: 'btn btn-primary'
+            = f.submit class: 'btn btn-info'
     h4
       = t('activerecord.models.task.other')
     ul#task-list
@@ -28,11 +31,20 @@
                 .d-flex.justify-content-between
                   .task-status
                     i.fas.fa-grip-vertical.grip.text-secondary.mr-1
-                    span.mb-3 class=("badge badge-#{task.badge_color}")
+                    span.mb-3 class=("badge badge-#{task.color_class}")
                       = task.status
                   div
-                    = link_to t('edit'), edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm'
-                    = link_to t('delete'), [task.project, task], method: :delete, class: 'btn btn-dark btn-sm', data: { confirm: t('confirm') }
+                    .dropdown.float-left
+                      button#dropdownMenuButton aria-expanded="false" aria-haspopup="true" class=("btn btn-sm mr-1 btn-outline-#{task.color_class} dropdown-toggle") data-toggle="dropdown" type="button"
+                        = task.readable_status
+                      .dropdown-menu[aria-labelledby="dropdownMenuButton"]
+                        - Task::STATUS_OPTIONS.each do |status|
+                          a.dropdown-item data-id="#{task.id}" data-reflex="click->StatusReflex#change" data-status="#{status[1]}" href="#"
+                            = status[0]
+                    = link_to edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' do
+                      i.far.fa-edit
+                    = link_to [task.project, task], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-dark btn-sm' do
+                      i.fas.fa-trash
                 h5.card-title.mb-2
                   span
                     = task.name

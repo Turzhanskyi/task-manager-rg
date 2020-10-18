@@ -6,6 +6,7 @@ require("channels")
 import "bootstrap";
 import Sortable from 'sortablejs';
 import "@fortawesome/fontawesome-free/css/all.css";
+import "controllers"
 import "../stylesheets/application"
 
 document.addEventListener("turbolinks:load", () => {
