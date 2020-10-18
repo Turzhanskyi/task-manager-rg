@@ -4,9 +4,13 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
+import Sortable from 'sortablejs';
+import "@fortawesome/fontawesome-free/css/all.css";
 import "../stylesheets/application"
 
 document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
+    var el = document.getElementById('task-list');
+    var sortable = Sortable.create(el);
 })
