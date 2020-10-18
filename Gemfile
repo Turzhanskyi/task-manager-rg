@@ -18,6 +18,7 @@ gem 'slim', '4.1.0'
 gem 'stimulus_reflex', '3.3.0'
 gem 'turbolinks', '5.2.1'
 gem 'webpacker', '5.1.1'
+gem 'will_paginate-bootstrap4', '0.2.2'
 
 group :development, :test do
   gem 'byebug', '11.1.3', platforms: %i[mri mingw x64_mingw]
