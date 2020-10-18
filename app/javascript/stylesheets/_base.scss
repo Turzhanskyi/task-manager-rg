@@ -1,3 +1,29 @@
+body {
+  font-family: Bad Script;
+  background: #cfcdab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+                  to bottom,
+                  #cfcdab,
+                  #cfcdab,
+                  #cfcdab,
+                  #d6ae31,
+                  #c79b27,
+                  #c79b27
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+                  to bottom,
+                  #cfcdab,
+                  #cfcdab,
+                  #cfcdab,
+                  #d6ae31,
+                  #c79b27,
+                  #c79b27
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .project-card {
   transition: background-color 0.5s ease;
   &:hover {
@@ -18,4 +44,13 @@
       cursor: grabbing;
     }
   }
+}
+
+.btnAddToDoList {
+  padding: 20px;
+}
+
+.footer-padding {
+  padding: 20px;
+  color: aliceblue;
 }
