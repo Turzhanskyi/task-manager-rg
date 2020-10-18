@@ -33,6 +33,8 @@ uk:
         description: 'Опис'
         status: 'Статус'
         project: 'Проєкт'
+        tasks: ' завдань)'
+        complete: '% виконання'
         error: 'заборонив збереження цього завдання:'
         attributes:
           name:

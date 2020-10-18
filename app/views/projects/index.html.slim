@@ -8,7 +8,18 @@
       = link_to project, class: 'text-decoration-none' do
         .card.project-card.mb-3
           .card-body
+            .mb-3
+              span class=("badge badge-#{project.badge_color}")
+                = project.status
+              br
+              span.text-secondary
+                small
+                  = project.percent_complete
+                  = t('activerecord.models.task.complete')
+                  |  (#{project.total_complete}/#{project.total_tasks}
+                  = t('activerecord.models.task.tasks')
             h5.card-title.text-dark
-              = project.name
+              b
+                = project.name
             p.text-secondary
               = project.description
