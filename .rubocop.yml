@@ -86,6 +86,7 @@ Metrics/BlockLength:
   Exclude:
     - "**/*_spec.rb"
     - "spec/factories/**/*.rb"
+    - "config/environments/development.rb"
 
 Metrics/ClassLength:
   Enabled: false
