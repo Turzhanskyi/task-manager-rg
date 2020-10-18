@@ -1,9 +1,6 @@
+= render 'header'
 .card
   .card-body
-    h2.card-title.d-flex.justify-content-between.mb-4
-      span
-        = t('activerecord.models.project.other')
-      = link_to t('activerecord.models.project.create_new'), new_project_path, class: 'btn btn-primary'
     - @projects.each do |project|
       = link_to project, class: 'text-decoration-none' do
         .card.project-card.mb-3
@@ -23,3 +20,5 @@
                 = project.name
             p.text-secondary
               = project.description
+  div.text-center.btnAddToDoList
+    = link_to raw('<i class="i fa fa-plus fa-lg"></i> Add TODO List'), new_project_path, class: 'btn btn-primary'

@@ -1,9 +1,9 @@
 = link_to t('back'), projects_path, class: 'btn btn-secondary mb-3'
 .card
   .card-body
-    h2.card-title.d-flex.justify-content-between.mb-4
-      i.fas.fa-calendar-alt.grip.text-secondary
-      span.text-primary
+    nav.navbar.navbar-dark.bg-primary.justify-content-between.mb-3
+      i.fas.fa-calendar-alt.fa-2x
+      h2.span.text-white
         = @project.name
       span
         = link_to edit_project_path(@project), class: 'btn btn-lg' do
@@ -20,7 +20,7 @@
           = f.text_field :name, class: 'form-control', placeholder: t('activerecord.models.task.attributes.name.placeholder')
           .input-group-append
             = f.submit class: 'btn btn-info'
-    h4
+    h3.text-primary
       = t('activerecord.models.task.other')
     div data-controller="tasks"
       ul#tasks-list data-action="drop->tasks#sort"
