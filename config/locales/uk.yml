@@ -15,13 +15,14 @@ uk:
         name: 'Назва'
         description: 'Опис'
         user: 'Користувач'
-        error: 'заборонив збереження цього проєкту:'
         add_task: 'Додати завдання'
         attributes:
           name:
-            placeholder: 'Введіть назву проєкту'
+            placeholder: 'Введіть назву проєкту...'
           description:
-            placeholder: 'Введіть опис проєкту'
+            placeholder: 'Введіть опис проєкту...'
+          earch:
+            placeholder: 'Тут шукайте проєкт...'
 
       task:
         one: 'Завдання'
@@ -41,7 +42,9 @@ uk:
           description:
             placeholder: 'Введіть опис завдання'
           status:
-            placeholder: 'Виберіть статус'
+            placeholder: 'Виберіть статус...'
+          search:
+            placeholder: 'Тут шукайте завдання...'
 
   devise:
     registrations:

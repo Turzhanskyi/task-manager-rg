@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_project, only: %i[show edit update destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects.paginate(page: params[:page], per_page: 3)
+    @search = Project.all.where(user_id: authenticate_user!).order(id: :desc).ransack(params[:search])
+    @projects = @search.result.includes(:user, @tasks).paginate(page: params[:page], per_page: 3)
   end
 
   # GET /projects/1

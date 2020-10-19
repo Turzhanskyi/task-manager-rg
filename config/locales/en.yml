@@ -18,9 +18,11 @@ en:
         add_task: 'Add Task'
         attributes:
           name:
-            placeholder: 'Enter project name'
+            placeholder: 'Enter project name...'
           description:
-            placeholder: 'Enter project description'
+            placeholder: 'Enter project description...'
+          search:
+            placeholder: 'Search project here...'
 
       task:
         one: 'Task'
@@ -41,6 +43,8 @@ en:
             placeholder: 'Enter task description'
           status:
             placeholder: 'Select status'
+          search:
+            placeholder: 'Search task here...'
 
   devise:
     registrations:
@@ -98,4 +102,3 @@ en:
   auth:
     sign_out: 'Sign out'
     edit: 'Edit account'
-
