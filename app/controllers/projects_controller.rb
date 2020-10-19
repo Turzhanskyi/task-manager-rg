@@ -6,8 +6,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @search = Project.all.where(user_id: authenticate_user!).order(id: :desc).ransack(params[:search])
-    @projects = @search.result.includes(:user, @tasks).paginate(page: params[:page], per_page: 3)
+    @search = current_user.projects.order(id: :desc).ransack(params[:search])
+    @projects = @search.result.includes(:user, @tasks).paginate(page: params[:page])
   end
 
   # GET /projects/1

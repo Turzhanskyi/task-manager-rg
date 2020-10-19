@@ -1,25 +1,7 @@
 = render 'header'
 .card
   .card-body
-    - @projects.each do |project|
-      = link_to project, class: 'text-decoration-none' do
-        .card.project-card.mb-3
-          .card-body
-            .mb-3
-              = render(ProgressBadgeComponent.new(status: project.status))
-              br
-              span.text-secondary
-                small
-                  = project.percent_complete
-                  = t('activerecord.models.task.complete')
-                  |  (#{project.total_complete}/#{project.total_tasks}
-                  = t('activerecord.models.task.tasks')
-            h5.card-title.text-dark
-              b
-                = project.name
-            p.text-secondary
-              = project.description
+    = render ProjectOverviewComponent.with_collection(@projects)
   = will_paginate @projects, list_classes: %w(pagination justify-content-center), previous_label: '&laquo;', next_label: '&raquo;'
   div.text-center.btnAddToDoList
     = link_to raw('<i class="i fa fa-plus fa-lg"></i> Add TODO List'), new_project_path, class: 'btn btn-primary'
-
