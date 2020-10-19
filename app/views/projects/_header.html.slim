@@ -8,20 +8,17 @@ nav.navbar.navbar-dark.bg-primary.justify-content-between
           span SIMPLE ToDo LISTS
         h4
           | FROM Ruby Garage
+        div.text-center
+          .btn-group
+            a.dropdown-toggle[data-toggle="dropdown"]
+              span.text-white
+                = current_user.email
+            ul.dropdown-menu
+              - if user_signed_in?
+                li
+                  = link_to "Вихід", destroy_user_session_path, method: :delete
+                li
+                  = link_to "Редагування", edit_user_registration_path
     nav.navbar
       div.text-center.mr-3
         i.fas.fa-language.fa-3x
-      div.text-center
-        .btn-group
-          button.btn.btn-danger.dropdown-toggle[type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"]
-            |  Sign in
-          .dropdown-menu
-            a.dropdown-item[href="#"]
-              | Action
-            a.dropdown-item[href="#"]
-              | Another action
-            a.dropdown-item[href="#"]
-              | Something else here
-            .dropdown-divider
-            a.dropdown-item[href="#"]
-              | Separated link
