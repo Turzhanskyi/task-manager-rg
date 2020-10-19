@@ -1,0 +1,21 @@
+li.task-item data-task-id="#{task.id}"
+  .card.mb-3
+    .card-body
+      .d-flex.justify-content-between
+        .task-status.mb-3
+          i.fas.fa-grip-vertical.grip.text-secondary.mr-1
+          = render(ProgressBadgeComponent.new(status: status))
+        div
+          = render(StatusChangerComponent.new(task_id: task_id, status: status))
+          = link_to edit_project_task_path(project, task), class: 'btn btn-light btn-sm' do
+            i.far.fa-edit
+          = link_to [project, task], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-dark btn-sm' do
+            i.fas.fa-trash
+      h5.card-title.mb-2
+        span
+          = name
+      span.text-primary
+        = t('activerecord.models.task.deadline')
+        = task.deadline
+      p
+        = description

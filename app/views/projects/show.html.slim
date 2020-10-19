@@ -25,31 +25,4 @@
     div data-controller="tasks"
       ul#tasks-list data-action="drop->tasks#sort"
         - @project.tasks.order(position: :asc).each do |task|
-          - if task.persisted?
-            li.task-item data-task-id="#{task.id}"
-              .card.mb-3
-                .card-body
-                  .d-flex.justify-content-between
-                    .task-status.mb-3
-                      i.fas.fa-grip-vertical.grip.text-secondary.mr-1
-                      = render(ProgressBadgeComponent.new(status: task.status))
-                    div
-                      .dropdown.float-left
-                        button#dropdownMenuButton aria-expanded="false" aria-haspopup="true" class=("btn btn-sm mr-1 btn-outline-#{task.color_class} dropdown-toggle") data-toggle="dropdown" type="button"
-                          = task.readable_status
-                        .dropdown-menu aria-labelledby="dropdownMenuButton"
-                          - Task::STATUS_OPTIONS.each do |status|
-                            a.dropdown-item data-id="#{task.id}" data-reflex="click->StatusReflex#change" data-status="#{status[1]}" href="#"
-                              = status[0]
-                      = link_to edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' do
-                        i.far.fa-edit
-                      = link_to [task.project, task], method: :delete, data: { confirm: t('confirm') }, class: 'btn btn-dark btn-sm' do
-                        i.fas.fa-trash
-                  h5.card-title.mb-2
-                    span
-                      = task.name
-                  span.text-primary
-                    = t('activerecord.models.task.deadline')
-                    = task.deadline
-                  p
-                    = task.description
+          = render(TaskComponent.new(task: task))
