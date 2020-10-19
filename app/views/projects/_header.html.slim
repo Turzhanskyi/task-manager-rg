@@ -22,5 +22,14 @@ nav.navbar.navbar-dark.bg-primary.justify-content-between
                 li
                 = link_to t('auth.edit'), edit_user_registration_path
     nav.navbar
-      div.text-center.mr-3
-        i.fas.fa-language.fa-3x
+      button.navbar-toggler aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent-4" data-toggle="collapse" type="button"
+        i.fas.fa-language.fa-2x.text-white
+      #navbarSupportedContent-4.collapse.navbar-collapse
+        ul.navbar-nav.text-white
+          li.nav-item
+            a.nav-link class=("nav-item#{" active" if I18n.locale == :uk}")
+              = link_to 'Укр', { locale: :uk }, class: 'btn btn-sm btn-warning btn-block'
+          li.nav-item
+            a.nav-link class=("nav-item#{" active" if I18n.locale == :en}")
+              = link_to 'En', { locale: :en }, class: 'btn btn-sm btn-warning btn-block'
+
