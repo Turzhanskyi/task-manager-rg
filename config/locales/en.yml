@@ -95,3 +95,7 @@ en:
   confirm: 'Are you sure?'
   show: 'Show'
   back: 'Back'
+  auth:
+    sign_out: 'Sign out'
+    edit: 'Edit account'
+
