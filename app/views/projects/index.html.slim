@@ -6,8 +6,7 @@
         .card.project-card.mb-3
           .card-body
             .mb-3
-              span class=("badge badge-#{project.badge_color}")
-                = project.status
+              = render(ProgressBadgeComponent.new(status: project.status))
               br
               span.text-secondary
                 small

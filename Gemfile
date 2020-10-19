@@ -18,6 +18,7 @@ gem 'simple_form', '5.0.3'
 gem 'slim', '4.1.0'
 gem 'stimulus_reflex', '3.3.0'
 gem 'turbolinks', '5.2.1'
+gem 'view_component', '2.18.0'
 gem 'webpacker', '5.1.1'
 gem 'will_paginate-bootstrap4', '0.2.2'
 
