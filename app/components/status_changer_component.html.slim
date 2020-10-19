@@ -1,0 +1,7 @@
+.dropdown.float-left
+  button#dropdownMenuButton aria-expanded="false" aria-haspopup="true" class=("btn btn-sm mr-1 btn-outline-#{color_class} dropdown-toggle") data-toggle="dropdown" type="button"
+    = readable_status
+  .dropdown-menu aria-labelledby="dropdownMenuButton"
+    - status_options.each do |status|
+      a.dropdown-item data-id=task_id data-reflex="click->StatusReflex#change" data-status="#{status.slugged}" href="#"
+        = status.readable

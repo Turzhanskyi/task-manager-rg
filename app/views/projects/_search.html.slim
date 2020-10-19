@@ -2,7 +2,7 @@
   .box-body
     .row
       .col-xs-3
-        = search_form_for @search, builder: SimpleForm::FormBuilder do |f|
+        = search_form_for search, builder: SimpleForm::FormBuilder do |f|
           = f.input :name_cont,
                   class: 'form-control',
                   required: false,
