@@ -21,7 +21,7 @@ uk:
             placeholder: 'Введіть назву проєкту...'
           description:
             placeholder: 'Введіть опис проєкту...'
-          earch:
+          search:
             placeholder: 'Тут шукайте проєкт...'
 
       task:
