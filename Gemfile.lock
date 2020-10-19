@@ -384,6 +384,8 @@ GEM
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
+    view_component (2.18.0)
+      activesupport (>= 5.0.0, < 7.0)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -451,6 +453,7 @@ DEPENDENCIES
   stimulus_reflex (= 3.3.0)
   turbolinks (= 5.2.1)
   tzinfo-data
+  view_component (= 2.18.0)
   web-console (= 4.0.4)
   webpacker (= 5.1.1)
   will_paginate-bootstrap4 (= 0.2.2)

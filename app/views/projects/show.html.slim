@@ -30,10 +30,9 @@
               .card.mb-3
                 .card-body
                   .d-flex.justify-content-between
-                    .task-status
+                    .task-status.mb-3
                       i.fas.fa-grip-vertical.grip.text-secondary.mr-1
-                      span.mb-3 class=("badge badge-#{task.color_class}")
-                        = task.status
+                      = render(ProgressBadgeComponent.new(status: task.status))
                     div
                       .dropdown.float-left
                         button#dropdownMenuButton aria-expanded="false" aria-haspopup="true" class=("btn btn-sm mr-1 btn-outline-#{task.color_class} dropdown-toggle") data-toggle="dropdown" type="button"
