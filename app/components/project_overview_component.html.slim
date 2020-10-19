@@ -1,0 +1,14 @@
+= link_to project, class: 'text-decoration-none' do
+  .card.project-card.mb-3
+    .card-body
+      .mb-3
+        = render(ProgressBadgeComponent.new(status: status))
+        br
+        span.text-secondary
+          small
+            = completion_stats
+      h5.card-title.text-dark
+        b
+          = name
+      p.text-secondary
+        = description
