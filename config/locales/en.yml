@@ -36,6 +36,7 @@ en:
         project: 'Project'
         tasks: ' tasks)'
         complete: '% complete'
+        deadline: 'Deadline: '
         attributes:
           name:
             placeholder: 'Enter task name'

@@ -5,6 +5,7 @@
 # Table name: tasks
 #
 #  id          :bigint           not null, primary key
+#  deadline    :date
 #  description :text
 #  name        :string
 #  position    :integer

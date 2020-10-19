@@ -5,6 +5,7 @@
 # Table name: tasks
 #
 #  id          :bigint           not null, primary key
+#  deadline    :date
 #  description :text
 #  name        :string
 #  position    :integer
@@ -26,6 +27,7 @@ FactoryBot.define do
     name { FFaker::Name.unique.name }
     description { FFaker::Name.unique.name }
     status { FFaker::Name.unique.name }
+    deadline { FFaker::Date.today }
     project
   end
 end
