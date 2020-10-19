@@ -1,0 +1,18 @@
+.box.box-danger
+  .box-body
+    .row
+      .col-xs-3
+        = search_form_for @search, builder: SimpleForm::FormBuilder do |f|
+          = f.input :name_cont,
+                  class: 'form-control',
+                  required: false,
+                  label: false,
+                  placeholder: t('activerecord.models.project.attributes.search.placeholder')
+          = f.input :tasks_name_cont,
+                  class: 'form-control',
+                  required: false,
+                  label: false,
+                  placeholder: t('activerecord.models.task.attributes.search.placeholder')
+          .btn-toolbar.justify-content-between role="toolbar"
+            = f.submit t('search'), class: 'btn btn-info btn-sm'
+            = link_to I18n.t('clear'), request.path, class: 'btn btn-warning btn-right btn-sm'
