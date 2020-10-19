@@ -4,7 +4,7 @@ nav.navbar.navbar-dark.bg-primary.justify-content-between
       = link_to '#search_form', role: 'button', data: { toggle: 'collapse' }, aria: { expanded: false, controls: 'search_form' } do
         i.fas.fa-search.fa-2x.text-white
     .collapse#search_form
-      = render 'search'
+      = render partial: 'search', locals: { search: @search }
     nav.navbar
       div.text-center
         h3
@@ -32,4 +32,3 @@ nav.navbar.navbar-dark.bg-primary.justify-content-between
           li.nav-item
             a.nav-link class=("nav-item#{" active" if I18n.locale == :en}")
               = link_to 'En', { locale: :en }, class: 'btn btn-sm btn-warning btn-block'
-

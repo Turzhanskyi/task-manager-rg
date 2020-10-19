@@ -1,4 +1,4 @@
-= form_for([@task.project, @task]) do |f|
+= form_for(task) do |f|
   = render 'projects/errors', errors: @task.errors
   .form-group
     = f.label :name

@@ -4,4 +4,4 @@
     h2.card-title.mb-4
       span
         = t('activerecord.models.task.edit')
-    = render 'form'
+    = render partial: 'form', locals: { task: [@task.project, @task] }
