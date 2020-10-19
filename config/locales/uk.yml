@@ -36,6 +36,7 @@ uk:
         project: 'Проєкт'
         tasks: ' завдань)'
         complete: '% виконання'
+        deadline: 'Реченець: '
         attributes:
           name:
             placeholder: 'Введіть зміст завдання'

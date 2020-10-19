@@ -49,5 +49,8 @@
                   h5.card-title.mb-2
                     span
                       = task.name
+                  span.text-primary
+                    = t('activerecord.models.task.deadline')
+                    = task.deadline
                   p
                     = task.description
