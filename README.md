@@ -26,3 +26,32 @@ I need a simple tool that supports me in controlling my task-flow.
 - It should have user authentication solution and a user should only
   have access to their own projects and tasks.
 - It should have automated tests for the all functionality
+
+# SQL task
+
+https://docs.google.com/document/d/1X244xXO4Kg5og3YKvTcug4xmwLWBJ4g7EetI16m7dwo/edit?usp=sharing
+------------------------------------------------------------------------------------------------
+
+### Given tables:
+
+01. tasks (id, name, status, project_id)
+02. projects (id, name)
+
+### Technical requirements
+
+- get all statuses, not repeating, alphabetically ordered
+- get the count of all tasks in each project, order by tasks count
+  descending
+- get the count of all tasks in each project, order by projects
+  names
+- get the tasks for all projects having the name beginning with
+  "N" letter
+- get the list of all projects containing the 'a' letter in the middle of
+  the name, and show the tasks count near each project. Mention that there can exist projects without tasks and tasks with
+project_id = NULL
+- get the list of tasks with duplicate names. Order alphabetically
+- get list of tasks having several exact matches of both name and
+  status, from the project 'Garage'. Order by matches count
+- get the list of project names having more than 10 tasks in status
+  'completed'. Order by project_id
+  
