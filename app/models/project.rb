@@ -25,8 +25,6 @@ class Project < ApplicationRecord
   belongs_to :user
   has_many :tasks, dependent: :destroy
 
-  self.per_page = 3
-
   def status
     return 'not-started' if tasks.none?
 

@@ -3,9 +3,11 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update destroy]
 
+  PER_PAGE = 3
+
   def index
-    @search = current_user.projects.order(id: :desc).ransack(params[:search])
-    @projects = @search.result.includes(:user, @tasks).paginate(page: params[:page])
+    @search = current_user.projects.order(id: :desc).ransack(search)
+    @projects = @search.result.includes(:user, @tasks).paginate(page)
   end
 
   def show
@@ -49,5 +51,13 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:name, :description)
+  end
+
+  def page
+    { page: params[:page], per_page: PER_PAGE }
+  end
+
+  def search
+    params[:search]
   end
 end
