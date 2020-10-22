@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="7" skipped="0" failures="0" errors="0" time="0.114049" timestamp="2020-10-20T03:04:59+03:00" hostname="T450s">
+<testsuite name="rspec" tests="7" skipped="0" failures="0" errors="0" time="0.113208" timestamp="2020-10-22T21:57:41+03:00" hostname="T450s">
 <properties>
-<property name="seed" value="8062"/>
+<property name="seed" value="23502"/>
 </properties>
-<testcase classname="spec.models.project_spec" name="Project validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/project_spec.rb" time="0.045836"></testcase>
-<testcase classname="spec.models.project_spec" name="Project associations is expected to belong to user required: true" file="./spec/models/project_spec.rb" time="0.006225"></testcase>
-<testcase classname="spec.models.project_spec" name="Project associations is expected to have many tasks dependent =&gt; destroy" file="./spec/models/project_spec.rb" time="0.005181"></testcase>
-<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/task_spec.rb" time="0.019272"></testcase>
-<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :status is either ‹&quot;not-started&quot;›, ‹&quot;in-progress&quot;›, or ‹&quot;complete&quot;›" file="./spec/models/task_spec.rb" time="0.008394"></testcase>
-<testcase classname="spec.models.task_spec" name="Task associations is expected to belong to project required: true" file="./spec/models/task_spec.rb" time="0.004053"></testcase>
-<testcase classname="spec.models.user_spec" name="User associations is expected to have many projects dependent =&gt; destroy" file="./spec/models/user_spec.rb" time="0.020828"></testcase>
+<testcase classname="spec.models.project_spec" name="Project validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/project_spec.rb" time="0.045539"></testcase>
+<testcase classname="spec.models.project_spec" name="Project associations is expected to belong to user required: true" file="./spec/models/project_spec.rb" time="0.003443"></testcase>
+<testcase classname="spec.models.project_spec" name="Project associations is expected to have many tasks dependent =&gt; destroy" file="./spec/models/project_spec.rb" time="0.004018"></testcase>
+<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/task_spec.rb" time="0.019411"></testcase>
+<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :status is either ‹&quot;not-started&quot;›, ‹&quot;in-progress&quot;›, or ‹&quot;complete&quot;›" file="./spec/models/task_spec.rb" time="0.008739"></testcase>
+<testcase classname="spec.models.task_spec" name="Task associations is expected to belong to project required: true" file="./spec/models/task_spec.rb" time="0.007041"></testcase>
+<testcase classname="spec.models.user_spec" name="User associations is expected to have many projects dependent =&gt; destroy" file="./spec/models/user_spec.rb" time="0.020598"></testcase>
 </testsuite>
