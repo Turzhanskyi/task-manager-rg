@@ -25,6 +25,8 @@ class Project < ApplicationRecord
   belongs_to :user
   has_many :tasks, dependent: :destroy
 
+  has_rich_text :description
+
   def status
     return 'not-started' if tasks.none?
 

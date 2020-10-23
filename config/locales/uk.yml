@@ -6,6 +6,17 @@ uk:
       destroy_notice: 'Проєкт успішно видалено.'
 
   activerecord:
+    attributes:
+      project:
+        name: 'Назва:'
+        description: 'Опис:'
+      task:
+        name: 'Назва:'
+        deadline: 'Реченець:'
+        description: 'Опис:'
+        status: 'Статус:'
+        task_image: 'Зображення:'
+
     models:
       project:
         one: 'Проєкт'

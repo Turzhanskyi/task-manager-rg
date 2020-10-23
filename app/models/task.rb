@@ -27,6 +27,10 @@ class Task < ApplicationRecord
 
   belongs_to :project
 
+  has_rich_text :description
+  has_one_attached :task_image
+  validate :acceptable_image
+
   validates :status, inclusion: { in: %w[not-started in-progress complete] }
 
   STATUS_OPTIONS = [
@@ -45,5 +49,14 @@ class Task < ApplicationRecord
 
   def not_started?
     status == 'not-started'
+  end
+
+  def acceptable_image
+    return unless task_image.attached?
+
+    errors.add(:task_image, 'is too big') unless task_image.byte_size <= 1.megabyte
+
+    acceptable_types = %w[image/jpeg image/png]
+    errors.add(:task_image, 'must be a JPEG or PNG') unless acceptable_types.include?(task_image.content_type)
   end
 end
