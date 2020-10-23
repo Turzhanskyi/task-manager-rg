@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="7" skipped="0" failures="0" errors="0" time="0.147661" timestamp="2020-10-25T01:14:03+03:00" hostname="T450s">
+<testsuite name="rspec" tests="19" skipped="0" failures="0" errors="0" time="1.866368" timestamp="2020-10-26T14:44:48+02:00" hostname="T450s">
 <properties>
-<property name="seed" value="56460"/>
+<property name="seed" value="54375"/>
 </properties>
-<testcase classname="spec.models.project_spec" name="Project validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/project_spec.rb" time="0.044947"></testcase>
-<testcase classname="spec.models.project_spec" name="Project associations is expected to belong to user required: true" file="./spec/models/project_spec.rb" time="0.004200"></testcase>
-<testcase classname="spec.models.project_spec" name="Project associations is expected to have many tasks dependent =&gt; destroy" file="./spec/models/project_spec.rb" time="0.006269"></testcase>
-<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/task_spec.rb" time="0.027980"></testcase>
-<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :status is either ‹&quot;not-started&quot;›, ‹&quot;in-progress&quot;›, or ‹&quot;complete&quot;›" file="./spec/models/task_spec.rb" time="0.016481"></testcase>
-<testcase classname="spec.models.task_spec" name="Task associations is expected to belong to project required: true" file="./spec/models/task_spec.rb" time="0.006356"></testcase>
-<testcase classname="spec.models.user_spec" name="User associations is expected to have many projects dependent =&gt; destroy" file="./spec/models/user_spec.rb" time="0.036870"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController authenticate user: should have a current_user" file="./spec/controllers/projects_controller_spec.rb" time="0.112331"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController GET #index with valid attributes renders index template" file="./spec/controllers/projects_controller_spec.rb" time="0.041119"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController GET #index with valid attributes returns http :success" file="./spec/controllers/projects_controller_spec.rb" time="0.038820"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController GET #new with valid attributes renders new template" file="./spec/controllers/projects_controller_spec.rb" time="0.037216"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController GET #new with valid attributes returns http :success" file="./spec/controllers/projects_controller_spec.rb" time="0.021567"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController POST #create with valid attributes creates new project and Project.count+1" file="./spec/controllers/projects_controller_spec.rb" time="0.094091"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController POST #create with valid attributes redirect to projects_path" file="./spec/controllers/projects_controller_spec.rb" time="0.029560"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController POST #create with invalid attributes does not create new project" file="./spec/controllers/projects_controller_spec.rb" time="0.027814"></testcase>
+<testcase classname="spec.controllers.projects_controller_spec" name="ProjectsController POST #create with invalid attributes render new template" file="./spec/controllers/projects_controller_spec.rb" time="0.023767"></testcase>
+<testcase classname="spec.models.project_spec" name="Project validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/project_spec.rb" time="0.007667"></testcase>
+<testcase classname="spec.models.project_spec" name="Project associations is expected to belong to user required: true" file="./spec/models/project_spec.rb" time="0.004572"></testcase>
+<testcase classname="spec.models.project_spec" name="Project associations is expected to have many tasks dependent =&gt; destroy" file="./spec/models/project_spec.rb" time="0.004036"></testcase>
+<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :name cannot be empty/falsy" file="./spec/models/task_spec.rb" time="0.025612"></testcase>
+<testcase classname="spec.models.task_spec" name="Task validations is expected to validate that :status is either ‹&quot;not-started&quot;›, ‹&quot;in-progress&quot;›, or ‹&quot;complete&quot;›" file="./spec/models/task_spec.rb" time="0.012155"></testcase>
+<testcase classname="spec.models.task_spec" name="Task associations is expected to belong to project required: true" file="./spec/models/task_spec.rb" time="0.009909"></testcase>
+<testcase classname="spec.models.user_spec" name="User associations is expected to have many projects dependent =&gt; destroy" file="./spec/models/user_spec.rb" time="0.002879"></testcase>
+<testcase classname="spec.requests.projects_request_spec" name="Projects GET /index returns http :success" file="./spec/requests/projects_request_spec.rb" time="1.195466"></testcase>
+<testcase classname="spec.requests.projects_request_spec" name="Projects POST /create returns http :found" file="./spec/requests/projects_request_spec.rb" time="0.013038"></testcase>
+<testcase classname="spec.requests.projects_request_spec" name="Projects POST /create returns response body and http :ok" file="./spec/requests/projects_request_spec.rb" time="0.155472"></testcase>
 </testsuite>

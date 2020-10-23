@@ -26,7 +26,7 @@ FactoryBot.define do
   factory :task do
     name { FFaker::Name.unique.name }
     description { FFaker::Name.unique.name }
-    status { FFaker::Name.unique.name }
+    status { 'not-started' }
     deadline { FFaker::Date.today }
     project
   end
