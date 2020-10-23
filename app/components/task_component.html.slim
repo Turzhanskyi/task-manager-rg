@@ -17,5 +17,5 @@ li.task-item data-task-id="#{task.id}"
       span.text-primary
         = t('activerecord.models.task.deadline')
         = task.deadline
-      p
-        = description
+      h6.text-secondary
+        == description

@@ -27,6 +27,8 @@ class Task < ApplicationRecord
 
   belongs_to :project
 
+  has_rich_text :description
+
   validates :status, inclusion: { in: %w[not-started in-progress complete] }
 
   STATUS_OPTIONS = [
