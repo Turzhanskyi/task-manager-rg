@@ -19,3 +19,4 @@ li.task-item data-task-id="#{task.id}"
         = task.deadline
       h6.text-secondary
         == description
+        == image_tag(task.task_image, height: '100', width: 'auto') if task.task_image.attached?
