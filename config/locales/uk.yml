@@ -2,8 +2,16 @@ uk:
   controller:
     projects_controller:
       create_notice: 'Проєкт успішно створено.'
+      create_alert: 'Проєкт не створено.'
       update_notice: 'Проєкт успішно оновлено.'
+      update_alert: 'Проєкт не оновлено.'
       destroy_notice: 'Проєкт успішно видалено.'
+    tasks_controller:
+      create_notice: 'Завдання успішно створено.'
+      create_alert: 'Завдання не створено.'
+      update_notice: 'Завдання успішно оновлено.'
+      update_alert: 'Завдання не оновлено.'
+      destroy_notice: 'Завдання успішно видалено.'
 
   activerecord:
     attributes:
