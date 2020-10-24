@@ -1,53 +1,52 @@
 # frozen_string_literal: true
 
 class TasksController < ApplicationController
-  before_action :set_project
-  before_action :set_task, only: %i[show edit update destroy]
+  before_action :project
+  before_action :task, only: %i[show new edit update destroy]
+  delegate :tasks, to: :project
 
   def index
-    @tasks = @project.tasks
+    @tasks = project.tasks
   end
 
   def show; end
 
-  def new
-    @task = @project.tasks.build
-  end
+  def new; end
 
   def edit; end
 
   def create
-    @task = @project.tasks.build(task_params)
-
-    if @task.save
-      redirect_to @task.project
+    if task.save
+      redirect_to @task.project, notice: t('controller.tasks_controller.create_notice')
     else
-      render action: 'new'
+      flash.now[:alert] = t('controller.tasks_controller.create_alert')
+      render action: :new
     end
   end
 
   def update
-    if @task.update(task_params)
-      redirect_to @task.project
+    if task.update(task_params)
+      redirect_to task.project, notice: t('controller.tasks_controller.update_notice')
     else
-      render action: 'edit'
+      flash.now[:alert] = t('controller.tasks_controller.update_alert')
+      render action: :edit
     end
   end
 
   def destroy
-    @task.destroy
+    task.destroy
 
-    redirect_to @project
+    redirect_to @project, notice: t('controller.tasks_controller.destroy_notice')
   end
 
   private
 
-  def set_project
-    @project = current_user.projects.find(params[:project_id])
+  def project
+    @project ||= current_user.projects.find(params[:project_id])
   end
 
-  def set_task
-    @task = @project.tasks.find(params[:id])
+  def task
+    @task ||= params[:id].present? ? project.tasks.find(params[:id]) : project.tasks.new(task_params)
   end
 
   def task_params

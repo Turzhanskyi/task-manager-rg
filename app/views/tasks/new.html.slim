@@ -1,0 +1,7 @@
+= link_to t('back'), @project, class: 'btn btn-secondary mb-3'
+.card
+  .card-body
+    h2.card-title.mb-4
+      span
+        = t('activerecord.models.task.create_new')
+    = render partial: 'form', locals: { task: [@task.project, @task] }

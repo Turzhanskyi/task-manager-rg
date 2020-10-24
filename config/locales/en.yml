@@ -2,8 +2,16 @@ en:
   controller:
     projects_controller:
       create_notice: 'Project was successfully created.'
+      create_alert: "Project didn't create."
       update_notice: 'Project was successfully updated.'
+      update_alert: "Project didn't update."
       destroy_notice: 'Project was successfully destroyed.'
+    tasks_controller:
+      create_notice: 'Task was successfully created.'
+      create_alert: "Task didn't create."
+      update_notice: 'Task was successfully updated.'
+      update_alert: "Task didn't update."
+      destroy_notice: 'Task was successfully destroyed.'
 
   activerecord:
     models:
