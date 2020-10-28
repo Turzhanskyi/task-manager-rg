@@ -45,6 +45,12 @@ end
 
 group :development do
   gem 'annotate', '3.1.1'
+  gem 'capistrano-bundler', '2.0.1'
+  gem 'capistrano-linked-files', '1.2.0'
+  gem 'capistrano-passenger', '0.2.0'
+  gem 'capistrano-rails', '1.6.1'
+  gem 'capistrano-rails-console', '2.3.0'
+  gem 'capistrano-rbenv', '2.2.0'
   gem 'listen', '3.2.1'
   gem 'spring', '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
