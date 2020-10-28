@@ -27,6 +27,26 @@ I need a simple tool that supports me in controlling my task-flow.
   have access to their own projects and tasks.
 - It should have automated tests for the all functionality
 
+==========================================================================================
+
+VIDEO <https://drive.google.com/file/d/1wZISA4B92OyPcyY_Cc7MRqEmkrEflpwZ/view?usp=sharing>
+------------------------------------------------------------------------------------------
+
+### Ruby: ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]
+### Rails 6.0.3.4
+
+- bundle exec rails db:create
+- bundle exec rails db:migrate
+- bundle exec rails db:seed
+- rails dev:cache
+
+Deploy to VPS: <http://turvitan.km.ua/>
+--------------------------------------
+HEROKU <https://task-manager-rg.herokuapp.com>
+----------------------------------------------
+## email: test_user@gmail.com
+## password: 123456
+
 # SQL task
 
 https://docs.google.com/document/d/1X244xXO4Kg5og3YKvTcug4xmwLWBJ4g7EetI16m7dwo/edit?usp=sharing
