@@ -9,6 +9,7 @@ gem 'anycable-rails', '1.0.4'
 gem 'bootsnap', '1.4.8', require: false
 gem 'devise', '4.7.3'
 gem 'jbuilder', '2.10.1'
+gem 'letter_opener_web', '1.4.0'
 gem 'pg', '1.2.3'
 gem 'puma', '4.3.6'
 gem 'rails', '6.0.3.4'
@@ -26,7 +27,6 @@ group :development, :test do
   gem 'byebug', '11.1.3', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '6.1.0'
   gem 'ffaker', '2.17.0'
-  gem 'letter_opener_web', '1.4.0'
   gem 'overcommit', '0.57.0'
   gem 'pronto', '0.10.0', require: false
   gem 'pronto-brakeman', '0.10.0', require: false
