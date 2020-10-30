@@ -47,3 +47,5 @@ yarn-debug.log*
 .history
 .rakeTasks
 .generators
+
+/config/credentials/production.key
