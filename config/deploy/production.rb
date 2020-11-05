@@ -5,3 +5,4 @@ set :rails_env, :production
 set :stage, :production
 set :sidekiq_env, :production
 set :deploy_to, '/home/deployer/apps/task-manager-rg'
+set :branch, 'fixbug/TM-RG-34-fix-bug-position-tasks'
