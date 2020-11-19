@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
+  config.session_store :cache_store
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -44,6 +45,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  config.action_cable.url = 'ws://turvitan.km.ua//cable'
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true

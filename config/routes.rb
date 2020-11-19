@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
 
   mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  mount ActionCable.server => '/cable'
 end
