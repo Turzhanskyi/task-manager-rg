@@ -87,6 +87,7 @@ Metrics/BlockLength:
     - "**/*_spec.rb"
     - "spec/factories/**/*.rb"
     - "config/environments/development.rb"
+    - "config/environments/production.rb"
     - "config/deploy.rb"
 
 Metrics/ClassLength:

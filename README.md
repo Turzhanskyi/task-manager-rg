@@ -40,9 +40,8 @@ VIDEO <https://drive.google.com/file/d/1wZISA4B92OyPcyY_Cc7MRqEmkrEflpwZ/view?us
 - bundle exec rails db:seed
 - rails dev:cache
 
-Deploy to VPS: <http://turvitan.km.ua/>
 --------------------------------------
-HEROKU <https://task-manager-rg.herokuapp.com>
+HEROKU <https://task-manager-turvitan.herokuapp.com>
 ----------------------------------------------
 ## email: test_user@gmail.com
 ## password: 123456
